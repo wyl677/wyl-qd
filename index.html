@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>网页的标题</title>
 </head>
 <body>
-    
+    <!-- 超链接 -->
+    <a href="http://www.baidu.com">普通链接</a> <br>
+    <a href="http://www.baidu.com" target="_self">普通链接(target:_self默认值，本窗口打开)</a> <br>
+    <a href="http://www.baidu.com" target="_blank" title="鼠标指上去显示的内容">普通链接(target:_blank 空白窗口打开)</a> <br>
+    <a href="#zj2">锚点链接(到章节2)</a><br>
+    <a href="javascript:alert('你好')">
+        弹出你好（执行js代码）
+    </a>
+    <a href="mailto:1475819449@qq.com">
+        点击给我发送邮件（要求计算机上有安装邮件发送软件，比如：exchange）
+    </a>
+
+    <a href="tel:13139323324">
+        点击给我拨打电话
+    </a>
+    <h2 id="zj1">章节1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, excepturi. Similique culpa ducimus placeat nihil ipsa. Fuga facere sunt, laboriosam temporibus minus optio nemo! Accusamus, pariatur? Sapiente pariatur temporibus veritatis.</p>
+    <h2 id="zj2">章节2</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus distinctio qui temporibus molestias vitae error modi totam natus, in doloribus fugiat placeat provident sed assumenda repellat, delectus aspernatur esse dolorum!</p>
+    <a href="#">回到顶部</a>
+    <!-- 图片元素 -->
+    <img src="./img/solar1.jpg" alt="当图片资源失效时，将使用该属性的文字代替图片">
+    <br>
+    <!-- 图片超链接 -->
+    <a href="www" target="_blank">
+        <img usemap="solarMap" src="./img/solar.jpg">
+    </a>
+
+    <map name="solarMap"> 
+        <area shape="circle" coords="284,561,39" href="https://baike.baidu.com/item/%E6%9C%A8%E6%98%9F/222105?fr=aladdin" alt="" target="_blank">
+    </map>
+
+    <!--视频 -->
+    <!-- 布尔属性：不写，或取值为属性名. autoplay:自动播放，muted:静音，controls：控制控件的显示，loop：循环播放-->
+    <video controls="controls" autoplay muted src="./media/shipin.MP4" style="width: 500px;"></video>
+    <!-- 音频 -->
+    <audio src="./media/John Lennon-Stand By Me.mp3" controls ></audio>
+
+    <!-- 更好的兼容格式写法 -->
+    <video controls="controls" autoplay muted style="width: 500px;">
+        <source src="./media/shipin.MP4">
+        <source src="./media/shipin.webm">
+        <p>你的浏览器不支持video元素，请在这里下载最新版本浏览器</p>
+    </video>
+    <br>
+    <!-- 列表元素 -->
+    把大象装冰箱总共分几步
+    <ol reversed> <!--有序列表：ordered list，alt+shift+⬇️：复制内容--> <!-- 元素 mdn:百度搜索解释-->
+        <li>打开冰箱门</li> <!--li:list item -->
+        <li>大象进去</li>
+        <li>冰箱门关上</li>
+        <li>打开冰箱门</li>
+        <li>大象进去</li>
+        <li>冰箱门关上</li>
+    </ol>
+    <ul><!--无序列表:unordered list-->
+        <li></li>
+    </ul>
+    http://vscode.cdn.azure.cn/stable/c3511e6c69bb39013c4a4b7b9566ec1ca73fc4d5/VSCode-darwin-universal.zip
+
+    只需把前面的 https://az764295.vo.msecnd.net 替换为 http://vscode.cdn.azure.cn
 </body>
 </html>
