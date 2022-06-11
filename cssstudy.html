@@ -13,35 +13,44 @@
                 2.rgb(0,255,0)
                 3.hex(16进制表示法)
             */
-            color: red;
+                /* color: red; */
 
             /* 背景颜色 */
-            background-color: lightblue;
+                /* background-color: lightblue; */
 
             /* 文字大小 */
             /* font-size: 15px; */
-            font-size: 2em;/*表示是父元素字体大小的2倍,如果没有父元素大小则使用基准字号：谷歌浏览器有设置16px*/
+                /* font-size: 2em;表示是父元素字体大小的2倍,如果没有父元素大小则使用基准字号：谷歌浏览器有设置16px */
             /* 文字粗细程度 */
-            font-weight: bold;
+                /* font-weight: bold; */
             /* 文字类型 多个是如果电脑里没有前面的字体就用后面的 sans-serif:如果都没有电脑自己选择一个默认的非称线字体*/
-            font-family: 'Courier New', Courier, monospace,sans-serif;
+                /* font-family: 'Courier New', Courier, monospace,sans-serif; */
             /* 字体样式，通常设置字体倾斜 */
-            font-style: italic;
+                /* font-style: italic; */
             /* 文本修饰 line-through:中间加条线 underline:下边加条线 overline:上面加条线 none:没有线(可以去<a>的线)*/
-            text-decoration: overline;
+                /* text-decoration: overline; */
             /* 首行文本缩进 2em:缩紧2字符*/
-            text-indent: 2em;
+                /* text-indent: 2em; */
             /* 单行 行高 设置行高为容器高度，可以让单行文本垂直居中*/
             /* 多行 行高可以设置为纯数字，表示相对于当前元素的字体大小 1.5 */
-            line-height: 1.5;
+                /* line-height: 1.5; */
             /* 设置元素的宽高 */
-            width: 50px;
-            height: 30px;
+                /* width: 50px;
+                height: 30px; */
             /* 文字间隙 */
-            letter-spacing: 1em;
+                /* letter-spacing: 1em; */
             /* 元素内部文字水平排列方式 */
-            text-align: center;
+                /* text-align: center; */
+        } 
 
+        span::before{
+            content: "《";
+            color: red;
+        }
+        
+        span::after{
+            content: "》";
+            color: red;
         }
     </style>
 </head>
@@ -50,7 +59,48 @@
     元素只管语义，样式由CSS决定，有的元素有默认样式而已
     <a href="">百度</a>
     <p>
-        Lorem ipsum dolor sit amet.
+        Lorem ipsum dolor sit amet.书名是<span>三国演义</span>呀
     </p>
+选择器
+    *:选中所有元素
+    [href]{}:选中所有具有href属性的元素
+    [href="www.baidu.com"]{
+        color:red;
+    }
+
+伪类选择器
+3.选择鼠标悬停时的a元素
+a:hover{
+    color: red;
+}    
+
+4.鼠标按下时的a元素
+a:active{
+    color:red;
+}
+1.超链接未访问时的状态
+a:link{
+    color:green;
+}
+2.超链接访问后的状态
+a:visited{
+    color:yellow;
+}
+
+伪元素选择器
+span::before{
+    content: "《";
+    color: red;
+}
+
+span::after{
+    content: "》";
+    color: red;
+}
+
+red属性下的后代blue属性的元素
+.red .blue{}
+空格：后代、没空格：并且、>：子元素、+：下一个元素(相邻兄弟元素)、～：后边出现的所有兄弟元素
+多个选择器用逗号分隔(语法糖)
 </body>
 </html>
