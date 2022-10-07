@@ -19,15 +19,306 @@
                 通过.lead来突出强调内容(其作用就是增大文本字号，加粗文本，而且对行高和margin也做相应的处理)
                 <samll>:小号字
                 <b><strong>:加粗
-                <i><em>:斜体            
+                <i><em>:斜体     
+            3.强调
+                .text-muted:提示，使用浅灰色(#999)
+                .text-primary:主要，使用蓝色(#428bca)
+                .text-success:成功，使用浅绿色(#3c763d)
+                .text-info:通知信息，使用浅蓝色(#31708f)
+                .text-warning:警告，使用黄色(#8a6d3b)
+                .text-danger:危险，使用褐色(#a94442)
+            4.对齐效果
+                .text-left:左对齐
+                .text-center:居中对齐
+                .text-right:右对齐
+                .text-justfy:两端对齐        
+            5.列表
+                无序列表：<ul><li>...</li></ul>   
+                有序列表：<ol><li>...</li></ol> 
+                定义列表：<dl><dt>...</dt><dd>...</dd></dl>     
+            6.代码
+                单行：<code></code>   
+                
+            7.表格
+                基础样式    
+                    .table:基础表格
+                附加样式
+                    .table-striped:斑马线表格
+                    .table-bordered:带边框的表格
+                    .table-hover:鼠标悬停高亮表格
+                    .talbe-condensed:紧凑型表格
+                tr、th、td样式
+                    .active:将悬停的颜色应用在行或者单元格上
+                    .success:表示成功的操作
+                    .info:表示信息变化的操作
+                    .warning:表示一个警告的操作
+                    .danger:表示一个危险的操作 
+            8.表单               
+                1、文本框
+                    .form-control
+                    表单控件的大小 .input-lg   .input-sm
+                2、下拉框
+                    .form-contorl 表单元素的样式
+                    multiple="multiple"设置下拉框多选
+                3、文本域
+                    .form-control
+                4、复选框checkbox
+                    垂直显示：.checkbox
+                    水平显示：.checkbox-inline  
+                5、单选框
+                    垂直显示：.radio
+                    水平显示：.radio-inline    
+                6、按钮
+                    基础样式：.btn
+                    附加样式：btn-primary   btn-info    btn-success btn-warning btn-danger  btn-link
+
+
     -->
+    <!-- 标题 -->
     <h1>标题1<small>副标题1</small></h1>
     <h2>标题2 <span class="small">副标题2</span></h2>
     <h3>标题3</h3>
     <div class="h1">你好</div>
 
     <hr/>
+    <!-- 段落 -->
     <p>的点点<small>小号字</small>滴滴点点<b>加粗</b>滴<strong>加粗</strong>滴点<i>斜体</i>点滴滴<em>斜体</em>点点滴滴点点滴滴点点滴滴</p>
     <p class="lead">的点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴点点滴滴</p>
+
+    <hr />
+    <!-- 强调 -->
+    <div class="text-muted">.text-muted:提示，使用浅灰色(#999)</div>
+    <div class="text-primary">.text-primary:主要，使用蓝色(#428bca)</div>
+    <div class="text-success">.text-sucess:成功，使用浅绿色(#3c763d)</div>
+    <div class="text-info">.text-info:通知信息，使用浅蓝色(#31708f)</div>
+    <div class="text-warning">.text-warning:警告，使用黄色(#8a6d3b)</div>
+    <div class="text-danger">.text-danger:危险，使用褐色(#a94442)</div>
+
+    <hr/>
+    <!-- 对齐效果 -->
+    <p style="text-align: right;">哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+    <p class="text-left">左哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+    <p class="text-right">右哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+    <p class="text-center">居中哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+    <p class="text-justfy">两端对齐哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+
+    <hr/>
+    <!-- 列表 -->
+    <ul>
+        <li>无序列表1</li>
+        <li>无序列表2</li>
+    </ul>
+
+    <ol>
+        <li>有序列表1</li>
+        <li>有序列表2</li>
+    </ol>
+    <dl>
+        <dt>HTML</dt>
+        <dd>超文本标记语言</dd>
+        <dt>CSS</dt>
+        <dd>层叠样式表是一种样式表语言</dd>
+    </dl>
+
+    <!-- 去点列表 -->
+    <ul class="list-unstyled">
+        <li>无序列表1</li>
+        <li>无序列表2</li>
+    </ul>
+
+    <!-- 内联列表 -->
+    <ul class="list-inline">
+        <li>首页</li>
+        <li>java学院</li>
+        <li>在线课堂</li>
+    </ul>
+
+    <hr/><br/>
+    <!-- 代码 -->
+    this is code <br/>
+    <code>this is code</code>
+    
+    <pre>
+        this is code
+        code 
+    </pre>
+
+    <p>使用<kbd>ctrl</kbd> + <kbd>s</kbd>保存内容</p>
+
+    <!-- 显示html代码需要使用字符实体 -->
+    <pre>
+        &lt;h2&gt;你好&lt;/h2&gt;
+    </pre>
+
+    <!-- 当长度超过指定值可以添加滚动条 -->
+    <pre class="pre-scrollable">
+        <ol>
+            <li>..............</li>
+            <li>..............</li>
+            <li>..............</li>
+            <li>..............</li>
+            <li>..............</li>
+            <li>..............</li>
+        </ol>
+    </pre>
+
+    <!-- 7.表格 -->
+    <table class="table table-striped table-bordered table-hover talbe-condensed">
+        <tr class="success">
+            <th class="warning">排名</th>
+            <th>语言</th>
+            <th>热度</th>
+        </tr>
+        <tr class="warning">
+            <td>1</td>
+            <td>Java</td>
+            <td>热门</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>javascript</td>
+            <td>一般</td>
+        </tr>
+    </table>
+
+    <!-- 8.表单 -->
+    <input type="text" /> <br>
+    
+    <select>
+        <option>请选择城市</option>
+        <option>上海</option>
+        <option>北京</option>
+    </select><br>
+    <textarea></textarea> <br>
+
+    <hr>
+    <div class="row">
+        <div class="col-md-3">
+            <!-- 文本框 -->
+            <input type="text" class="form-control" />
+            <input type="text" class="form-control input-lg" />
+            <input type="text" class="form-control input-sm" />
+        </div>
+    </div>
+   
+
+    <div class="row">
+        <div class="col-md-3">
+            <!-- 下拉框 -->
+            <select class="form-control">
+                <option>请选择城市</option>
+                <option>上海</option>
+                <option>北京</option>
+            </select> <br>
+
+            <select class="form-control" multiple="multiple">
+                <option>请选择城市</option>
+                <option>上海</option>
+                <option>北京</option>
+                <option>上海</option>
+                <option>北京</option>
+                <option>上海</option>
+                <option>北京</option>
+                <option>上海</option>
+                <option>北京</option>
+                <option>上海</option>
+                <option>北京</option>
+            </select> 
+        </div>
+    </div>
+
+    <!-- 文本域 -->
+    <div class="row">
+        <div class="col-md-3">
+            <textarea class="form-control">
+
+            </textarea>
+        </div>
+    </div>
+
+    <!-- 复选框 -->
+    <input type="checkbox" name="hobby"/> 唱歌
+    <input type="checkbox" name="hobby"/> 跳舞
+    <!-- 单选框 -->
+    <input type="radio" name="sex"/> 男
+    <input type="radio" name="sex"/> 女
+
+
+    <!-- 复选框 -->
+    <!-- 垂直显示 -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="checkbox">
+                <label><input type="checkbox" name="hobby">唱歌</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="hobby">跳舞</label>
+            </div>
+        </div>
+    </div>
+
+     <!-- 复选框 -->
+    <!-- 水平显示 -->
+    <div class="row">
+        <div class="col-md-3">
+            <label class="checkbox-inline">
+                <input type="checkbox" name="hobby">唱歌
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="hobby">跳舞
+            </label>
+        </div>
+    </div>
+
+     <!-- 单选框 -->
+    <!-- 垂直显示 -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="radio">
+                <label><input type="radio" name="sex">男</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="sex">女</label>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- 单选框 -->
+    <!-- 水平显示 -->
+    <div class="row">
+        <div class="col-md-3">
+            <label class="radio-inline">
+                <input type="radio" name="sex">男
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="sex">女
+            </label>
+        </div>
+    </div>
+
+    <!-- 按钮 -->
+    <button>按钮</button> <input type="button" value="按钮">
+    <br>
+    <button class="btn btn-success">按钮</button>
+
+    <!--通过按钮样式设置其他元素为按钮效果 -->
+    <a href="#" class="btn btn-success">a标签</a>
+    <span class="btn btn-danger">span标签</span>
+    <div class="btn btn-info">div标签</div>
+
+    <br>
+    <!-- 设置按钮大小 -->
+    <button class="btn btn-success">按钮</button>
+    <button class="btn btn-success btn-lg">按钮</button>
+    <button class="btn btn-success btn-sm">按钮</button>
+    <button class="btn btn-success btn-xs">按钮</button>
+
+    <br>
+    <!-- 按钮禁用 -->
+    <!-- 在标签中添加disabled属性 -->
+    <button class="btn btn-success" onclick="alert('hello')" disabled="disabled">按钮</button>
+    <!-- 在元素标签中添加类名disabled -->
+    <button class="btn btn-success disabled" onclick="alert('hello')">按钮</button>
 </body>
 </html>
