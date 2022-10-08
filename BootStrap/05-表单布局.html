@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单布局</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!-- 
+        表单布局
+            水平表单
+                设置样式：form-horizontal
+     -->
+     <form action="#" method="" class="form-horizontal" role="form">
+        <h2 align="center">用户信息</h2>
+        <!-- 表单中的表单元素组 -->
+        <div class="form-group">
+            <label for= "uname" class="control-label col-md-2">姓名</label>
+            <div class="col-md-8">
+                <input type="text" id="uname" class="form-control" placeholder="请输入姓名">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for= "pwd" class="control-label col-md-2">密码</label>
+            <div class="col-md-8">
+                <input type="password" id="pwd" class="form-control" placeholder="请输入密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">爱好</label>
+            <div class="col-md-8">
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="hobby"> 唱歌
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="hobby"> 跳舞
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="hobby"> rap
+                </label>
+                <label class="checkbox-inline">
+                    <input type="checkbox" name="hobby"> 篮球
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">城市</label>
+            <div class="col-md-8">
+                <select class="form-control">
+                    <option>请选择城市</option>
+                    <option>北京</option>
+                    <option>上海</option>
+                    <option>广州</option>
+                    <option>深圳</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="remark" class="control-label col-md-2">简介</label>
+            <div class="col-md-8">
+                <textarea id="remark" class="form-control"></textarea>
+            </div>
+        </div>
+     </form>
+</body>
+
+</html>
